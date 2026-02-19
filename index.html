@@ -43,7 +43,7 @@
         header {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            padding: 20px 5%;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -53,12 +53,12 @@
             z-index: 100;
         }
 
-        .header-info { display: flex; align-items: center; gap: 15px; }
-        .mascot { font-size: 50px; cursor: pointer; }
-        .school-logo { width: 80px; height: 80px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 2px solid var(--sage); }
+        .header-info { display: flex; align-items: center; gap: 12px; }
+        .mascot { font-size: 45px; cursor: pointer; }
+        .school-logo { width: 70px; height: 70px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 2px solid var(--sage); }
         .school-logo img { width: 90%; height: 90%; object-fit: contain; }
 
-        main { flex: 1; padding: 30px 5% 120px; max-width: 1200px; margin: 0 auto; width: 100%; }
+        main { flex: 1; padding: 20px 5% 120px; max-width: 1200px; margin: 0 auto; width: 100%; }
 
         .page { display: none; animation: fadeIn 0.4s ease; }
         .active-page { display: block; }
@@ -79,10 +79,20 @@
 
         .modul-section { margin-bottom: 40px; }
         .modul-title { color: var(--dark-sage); border-left: 5px solid var(--sage); padding-left: 15px; margin-bottom: 20px; font-size: 1.4rem; font-weight: 700; }
-        .arabic { font-size: 1.8rem; margin: 15px 0; line-height: 3rem; text-align: right; font-family: 'Times New Roman', serif; direction: rtl; }
-        .translation { font-style: italic; font-size: 0.9rem; color: #555; text-align: left; }
-        .icon-box { font-size: 45px; background: var(--cream); width: 80px; height: 80px; line-height: 80px; border-radius: 50%; margin: 0 auto 15px; }
-        .btn-link { display: inline-block; background: var(--dark-sage); color: white; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+        .arabic { font-size: 1.6rem; margin: 15px 0; line-height: 2.8rem; text-align: center; font-family: 'Times New Roman', serif; direction: rtl; }
+        .translation { font-style: italic; font-size: 0.9rem; color: #555; text-align: center; line-height: 1.4; }
+        .icon-box { font-size: 45px; background: var(--cream); width: 80px; height: 80px; line-height: 80px; border-radius: 50%; margin: 0 auto 15px; text-align: center;}
+        .btn-link { display: inline-block; background: var(--dark-sage); color: white; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: bold; margin-top: 15px; width: 100%; text-align: center;}
+
+        .motivation-box {
+            background: var(--dark-sage);
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
         nav { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); display: flex; justify-content: space-around; padding: 10px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 1000; }
         .nav-btn { border: none; background: none; color: #aaa; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
@@ -98,8 +108,8 @@
         <div class="header-info">
             <div class="mascot" onclick="shout()">🕌☪</div>
             <div>
-                <h1 style="margin:0; font-size: 1.3rem;">Smart Ramadhan SMP Islam YTM 1 Bogor</h1>
-                <p id="date-now" style="margin:0; font-size: 12px; color: var(--sage); font-weight: bold;"></p>
+                <h1 style="margin:0; font-size: 1rem;">Smart Ramadhan SMP YTM 1</h1>
+                <p id="date-now" style="margin:0; font-size: 11px; color: var(--sage); font-weight: bold;"></p>
             </div>
         </div>
         <div class="school-logo">
@@ -109,100 +119,50 @@
 
     <main>
         <div id="laporan" class="page active-page">
-            <h2 style="text-align: center; margin-bottom: 30px;">Setoran Ibadah Digital 📝</h2>
+            <h2 style="text-align: center; margin-bottom: 25px;">Setoran Ibadah Digital 📝</h2>
             <div class="dashboard-grid">
                 <div class="report-card">
                     <div class="icon-box">🍱</div>
-                    <h3>Jurnal Puasa</h3>
-                    <p style="font-size: 14px; opacity: 0.7;">Laporan niat, sahur, dan buka.</p>
+                    <h3 style="text-align: center;">Jurnal Puasa</h3>
+                    <p style="font-size: 14px; opacity: 0.7; text-align: center;">Laporan niat, sahur, dan buka.</p>
                     <a href="https://forms.gle/n1WdRqApZhxWYkNz9" class="btn-link">Isi Form</a>
                 </div>
                 <div class="report-card">
                     <div class="icon-box">🕌</div>
-                    <h3>Jurnal Shalat</h3>
-                    <p style="font-size: 14px; opacity: 0.7;">Laporan Fardhu & Tarawih.</p>
+                    <h3 style="text-align: center;">Jurnal Shalat</h3>
+                    <p style="font-size: 14px; opacity: 0.7; text-align: center;">Laporan Fardhu & Tarawih.</p>
                     <a href="https://forms.gle/tQY728ViB4j3bZrv8" class="btn-link">Isi Form</a>
                 </div>
                 <div class="report-card">
                     <div class="icon-box">📖</div>
-                    <h3>Jurnal Quran</h3>
-                    <p style="font-size: 14px; opacity: 0.7;">Laporan Tilawah & Hafalan.</p>
+                    <h3 style="text-align: center;">Jurnal Quran</h3>
+                    <p style="font-size: 14px; opacity: 0.7; text-align: center;">Laporan Tilawah & Hafalan.</p>
                     <a href="https://forms.gle/L8S3cn3QRjAhR2pb8" class="btn-link">Isi Form</a>
                 </div>
+            </div>
+
+            <div class="motivation-box">
+                <h3 style="margin-top: 0; font-size: 1.1rem;">✨ Pesan Hari Ini</h3>
+                <p id="daily-quote" style="font-style: italic; font-size: 0.9rem; line-height: 1.4;">Memuat pesan...</p>
+            </div>
+
+            <div class="report-card" style="margin-top: 20px;">
+                <h3 id="dua-title" style="text-align: center; margin-bottom: 10px; font-size: 1.1rem;">🤲 Doa Harian</h3>
+                <div class="arabic" id="dua-arabic">...</div>
+                <p class="translation" id="dua-translation">...</p>
             </div>
         </div>
 
         <div id="modul" class="page">
-            <h2 style="text-align: center; margin-bottom: 30px;">📚 Panduan Lengkap Ramadhan</h2>
-            
-            <div class="modul-section">
-                <h3 class="modul-title">⚖️ Hukum & Syarat Puasa</h3>
-                <div class="dashboard-grid">
-                    <div class="report-card" style="text-align: left;">
-                        <b>Hukum Puasa</b>
-                        <p style="font-size: 13px;">Wajib (Fardhu 'Ain) bagi setiap muslim Baligh & Berakal.</p>
-                    </div>
-                    <div class="report-card" style="text-align: left;">
-                        <b>Syarat Sah</b>
-                        <ul style="font-size: 13px; padding-left: 18px;">
-                            <li>Islam & Tamyiz</li>
-                            <li>Suci dari Haid/Nifas</li>
-                            <li>Waktu yang dibolehkan</li>
-                        </ul>
-                    </div>
-                    <div class="report-card" style="text-align: left;">
-                        <b>Membatalkan Puasa</b>
-                        <ul style="font-size: 13px; padding-left: 18px;">
-                            <li>Makan/Minum sengaja</li>
-                            <li>Muntah sengaja</li>
-                            <li>Haid/Nifas/Hilang Akal</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+            <h2 style="text-align: center; margin-bottom: 30px;">📚 Panduan Lengkap</h2>
             <div class="modul-section">
                 <h3 class="modul-title">🌙 Niat & Doa Utama</h3>
                 <div class="dashboard-grid">
                     <div class="report-card" style="text-align: left;">
                         <b>Niat Puasa</b>
-                        <div class="arabic">نَوَيْتُ صَوْمَ غَدٍ عَنْ أَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ لِلَّهِ تَعَالَى</div>
-                        <p class="translation">"Aku niat berpuasa esok hari untuk menunaikan kewajiban bulan Ramadhan tahun ini karena Allah Ta'ala."</p>
+                        <div class="arabic" style="text-align:right;">نَوَيْتُ صَوْمَ غَدٍ عَنْ أَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ لِلَّهِ تَعَالَى</div>
+                        <p class="translation" style="text-align:left;">"Aku niat berpuasa esok hari untuk menunaikan kewajiban bulan Ramadhan tahun ini karena Allah Ta'ala."</p>
                     </div>
-                    <div class="report-card" style="text-align: left;">
-                        <b>Doa Berbuka</b>
-                        <div class="arabic">اللَّهُمَّ لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ</div>
-                        <p class="translation">"Ya Allah, untuk-Mu aku berpuasa, dan kepada-Mu aku beriman, dan dengan rezeki-Mu aku berbuka..."</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modul-section">
-                <h3 class="modul-title">📖 Tips Menghafal Al-Qur'an</h3>
-                <div class="dashboard-grid">
-                    <div class="report-card" style="text-align: left;">
-                        <b>Metode Tikrar</b>
-                        <p style="font-size: 13px;">Ulangi satu ayat 20x. Setelah hafal 1 halaman, ulangi 5x sebelum lanjut ke halaman baru.</p>
-                    </div>
-                    <div class="report-card" style="text-align: left;">
-                        <b>Waktu Utama</b>
-                        <p style="font-size: 13px;">Gunakan waktu setelah Sahur atau Subuh saat pikiran masih jernih.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modul-section">
-                <h3 class="modul-title">🤲 Doa Ramadhan</h3>
-                <div class="report-card" style="text-align: left; max-width: 600px; margin: 0 auto;">
-                    <b>Doa Menyambut & Menjalani Ramadhan</b>
-                    <div class="arabic" style="text-align: center;">أَللَّهُمَّ سَلِّمْنِي لِرَمَضَانَ، وَسَلِّمْ رَمَضَانَ لِي، وَتَسَلَّمْهُ مِنِّي مُتَقَبَّلًا</div>
-                    <p style="font-size: 0.9rem; text-align: center; color: #444; margin: 10px 0;">
-                        <i>"Allahumma sallimni li Ramadhana, wa sallim Ramadhana li, wa tasallamhu minni mutaqabbalan."</i>
-                    </p>
-                    <hr style="border: 0; border-top: 1px solid #ddd;">
-                    <p class="translation" style="text-align: center;">
-                        "Ya Allah, selamatkanlah aku untuk bulan Ramadhan, selamatkanlah bulan Ramadhan untukku, dan terimalah amal ibadaku di bulan Ramadhan dengan ridha-Mu."
-                    </p>
                 </div>
             </div>
         </div>
@@ -226,9 +186,87 @@
         btn.classList.add('active');
         window.scrollTo(0,0);
     }
-    function shout() { alert("Semangat puasanya hari ini! 😊"); }
+
+    // DATA DOA & KATA BIJAK (10 Variasi)
+    const dailyContent = [
+        {
+            quote: '"Setiap amal dilipatgandakan pahalanya, kecuali puasa. Puasa untuk-Ku."',
+            title: "🤲 Doa Orang Tua",
+            arabic: "رَبِّ اغْفِرْ لِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرًا",
+            trans: "Ya Tuhanku, ampunilah aku dan kedua orang tuaku, dan sayangilah mereka sebagaimana mereka mendidikku di waktu kecil."
+        },
+        {
+            quote: '"Barangsiapa berpuasa Ramadhan karena iman, diampuni dosanya yang lalu."',
+            title: "🤲 Doa Sapu Jagad (Selamat)",
+            arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+            trans: "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka."
+        },
+        {
+            quote: '"Puasa adalah perisai. Janganlah berkata kotor dan berbuat jahil."',
+            title: "🤲 Doa Ketetapan Iman",
+            arabic: "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
+            trans: "Wahai Dzat yang membolak-balikkan hati, teguhkanlah hatiku di atas agama-Mu."
+        },
+        {
+            quote: '"Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain."',
+            title: "🤲 Doa Kelancaran Urusan",
+            arabic: "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
+            trans: "Ya Tuhanku, lapangkanlah dadaku, dan mudahkanlah untukku urusanku."
+        },
+        {
+            quote: '"Tidurnya orang puasa adalah ibadah, diamnya adalah tasbih."',
+            title: "🤲 Doa Sebelum Belajar",
+            arabic: "رَبِّ زِدْنِي عِلْمًا وَارْزُقْنِي فَهْمًا",
+            trans: "Ya Tuhanku, tambahkanlah ilmu kepadaku dan berilah aku pemahaman yang baik."
+        },
+        {
+            quote: '"Kejujuran itu ketenangan, sedangkan kebohongan itu keraguan."',
+            title: "🤲 Doa Perlindungan dari Sifat Malas",
+            arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ",
+            trans: "Ya Allah, aku berlindung kepada-Mu dari kelemahan dan rasa malas."
+        },
+        {
+            quote: '"Senyummu di hadapan saudaramu adalah sedekah."',
+            title: "🤲 Doa Kebaikan Hati",
+            arabic: "اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
+            trans: "Ya Allah, sebagaimana Engkau telah memperbagus kejadianku, maka baguskanlah pula akhlakku."
+        },
+        {
+            quote: '"Ramadhan adalah bulan kesabaran, dan pahala kesabaran adalah surga."',
+            title: "🤲 Doa Penenang Hati",
+            arabic: "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ",
+            trans: "Wahai Yang Maha Hidup, Wahai Yang Maha Berdiri Sendiri, dengan rahmat-Mu aku memohon pertolongan."
+        },
+        {
+            quote: '"Makan sahur itu berkah, maka janganlah kalian meninggalkannya."',
+            title: "🤲 Doa Mensyukuri Nikmat",
+            arabic: "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ",
+            trans: "Ya Tuhanku, berilah aku ilham untuk tetap mensyukuri nikmat-Mu yang telah Engkau anugerahkan kepadaku."
+        },
+        {
+            quote: '"Barangsiapa memberi makan orang berbuka, baginya pahala seperti yang puasa."',
+            title: "🤲 Doa Terhindar dari Penyakit",
+            arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ سُوءِ الأَسْقَامِ",
+            trans: "Ya Allah, aku berlindung kepada-Mu dari buruknya berbagai macam penyakit."
+        }
+    ];
+
+    function updateDailyContent() {
+        const today = new Date().getDate(); 
+        const index = today % dailyContent.length; 
+        const content = dailyContent[index];
+
+        document.getElementById('daily-quote').innerText = content.quote;
+        document.getElementById('dua-title').innerText = content.title;
+        document.getElementById('dua-arabic').innerText = content.arabic;
+        document.getElementById('dua-translation').innerText = content.trans;
+    }
+
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById('date-now').innerText = new Date().toLocaleDateString('id-ID', options);
+    updateDailyContent();
+
+    function shout() { alert("Semangat! Hari ini adalah kesempatan untuk jadi lebih baik. 😊"); }
 </script>
 
 </body>
