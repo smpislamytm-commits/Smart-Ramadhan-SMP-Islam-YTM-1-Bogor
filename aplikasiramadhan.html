@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ramadhan SMP Islam YTM 1 Bogor 🌙</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #9BB0A1;
+            --dark-sage: #3D4F42;
+            --cream: #F8F6F0;
+            --white: #ffffff;
+            --ketupat-color: rgba(155, 176, 161, 0.2);
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-sage);
+            background-image: 
+                linear-gradient(30deg, var(--ketupat-color) 12%, transparent 12.5%, transparent 87%, var(--ketupat-color) 87.5%, var(--ketupat-color)),
+                linear-gradient(150deg, var(--ketupat-color) 12%, transparent 12.5%, transparent 87%, var(--ketupat-color) 87.5%, var(--ketupat-color)),
+                linear-gradient(30deg, var(--ketupat-color) 12%, transparent 12.5%, transparent 87%, var(--ketupat-color) 87.5%, var(--ketupat-color)),
+                linear-gradient(150deg, var(--ketupat-color) 12%, transparent 12.5%, transparent 87%, var(--ketupat-color) 87.5%, var(--ketupat-color)),
+                linear-gradient(60deg, var(--ketupat-color) 25%, transparent 25.5%, transparent 75%, var(--ketupat-color) 75.5%, var(--ketupat-color)),
+                linear-gradient(60deg, var(--ketupat-color) 25%, transparent 25.5%, transparent 75%, var(--ketupat-color) 75.5%, var(--ketupat-color));
+            background-size: 80px 140px;
+            background-attachment: fixed;
+        }
+
+        .app-shell {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100%;
+            background: rgba(248, 246, 240, 0.6);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid var(--sage);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-info { display: flex; align-items: center; gap: 15px; }
+        .mascot { font-size: 50px; cursor: pointer; }
+        .school-logo { width: 80px; height: 80px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 2px solid var(--sage); }
+        .school-logo img { width: 90%; height: 90%; object-fit: contain; }
+
+        main { flex: 1; padding: 30px 5% 120px; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+        .page { display: none; animation: fadeIn 0.4s ease; }
+        .active-page { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .report-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .modul-section { margin-bottom: 40px; }
+        .modul-title { color: var(--dark-sage); border-left: 5px solid var(--sage); padding-left: 15px; margin-bottom: 20px; font-size: 1.4rem; font-weight: 700; }
+        .arabic { font-size: 1.8rem; margin: 15px 0; line-height: 3rem; text-align: right; font-family: 'Times New Roman', serif; direction: rtl; }
+        .translation { font-style: italic; font-size: 0.9rem; color: #555; text-align: left; }
+        .icon-box { font-size: 45px; background: var(--cream); width: 80px; height: 80px; line-height: 80px; border-radius: 50%; margin: 0 auto 15px; }
+        .btn-link { display: inline-block; background: var(--dark-sage); color: white; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+
+        nav { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); display: flex; justify-content: space-around; padding: 10px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 1000; }
+        .nav-btn { border: none; background: none; color: #aaa; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+        .nav-btn.active { color: var(--dark-sage); }
+        .nav-btn span { font-size: 20px; }
+        .nav-btn label { font-size: 10px; font-weight: 700; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="app-shell">
+    <header>
+        <div class="header-info">
+            <div class="mascot" onclick="shout()">🕌☪</div>
+            <div>
+                <h1 style="margin:0; font-size: 1.3rem;">Smart Ramadhan SMP Islam YTM 1 Bogor</h1>
+                <p id="date-now" style="margin:0; font-size: 12px; color: var(--sage); font-weight: bold;"></p>
+            </div>
+        </div>
+        <div class="school-logo">
+            <img src="Logo YTM SMP.png" alt="Logo">
+        </div>
+    </header>
+
+    <main>
+        <div id="laporan" class="page active-page">
+            <h2 style="text-align: center; margin-bottom: 30px;">Setoran Ibadah Digital 📝</h2>
+            <div class="dashboard-grid">
+                <div class="report-card">
+                    <div class="icon-box">🍱</div>
+                    <h3>Jurnal Puasa</h3>
+                    <p style="font-size: 14px; opacity: 0.7;">Laporan niat, sahur, dan buka.</p>
+                    <a href="https://forms.gle/n1WdRqApZhxWYkNz9" class="btn-link">Isi Form</a>
+                </div>
+                <div class="report-card">
+                    <div class="icon-box">🕌</div>
+                    <h3>Jurnal Shalat</h3>
+                    <p style="font-size: 14px; opacity: 0.7;">Laporan Fardhu & Tarawih.</p>
+                    <a href="https://forms.gle/tQY728ViB4j3bZrv8" class="btn-link">Isi Form</a>
+                </div>
+                <div class="report-card">
+                    <div class="icon-box">📖</div>
+                    <h3>Jurnal Quran</h3>
+                    <p style="font-size: 14px; opacity: 0.7;">Laporan Tilawah & Hafalan.</p>
+                    <a href="https://forms.gle/L8S3cn3QRjAhR2pb8" class="btn-link">Isi Form</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modul" class="page">
+            <h2 style="text-align: center; margin-bottom: 30px;">📚 Panduan Lengkap Ramadhan</h2>
+            
+            <div class="modul-section">
+                <h3 class="modul-title">⚖️ Hukum & Syarat Puasa</h3>
+                <div class="dashboard-grid">
+                    <div class="report-card" style="text-align: left;">
+                        <b>Hukum Puasa</b>
+                        <p style="font-size: 13px;">Wajib (Fardhu 'Ain) bagi setiap muslim Baligh & Berakal.</p>
+                    </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Syarat Sah</b>
+                        <ul style="font-size: 13px; padding-left: 18px;">
+                            <li>Islam & Tamyiz</li>
+                            <li>Suci dari Haid/Nifas</li>
+                            <li>Waktu yang dibolehkan</li>
+                        </ul>
+                    </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Membatalkan Puasa</b>
+                        <ul style="font-size: 13px; padding-left: 18px;">
+                            <li>Makan/Minum sengaja</li>
+                            <li>Muntah sengaja</li>
+                            <li>Haid/Nifas/Hilang Akal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modul-section">
+                <h3 class="modul-title">🌙 Niat & Doa Utama</h3>
+                <div class="dashboard-grid">
+                    <div class="report-card" style="text-align: left;">
+                        <b>Niat Puasa</b>
+                        <div class="arabic">نَوَيْتُ صَوْمَ غَدٍ عَنْ أَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ لِلَّهِ تَعَالَى</div>
+                        <p class="translation">"Aku niat berpuasa esok hari untuk menunaikan kewajiban bulan Ramadhan tahun ini karena Allah Ta'ala."</p>
+                    </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Doa Berbuka</b>
+                        <div class="arabic">اللَّهُمَّ لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ</div>
+                        <p class="translation">"Ya Allah, untuk-Mu aku berpuasa, dan kepada-Mu aku beriman, dan dengan rezeki-Mu aku berbuka..."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modul-section">
+                <h3 class="modul-title">📖 Tips Menghafal Al-Qur'an</h3>
+                <div class="dashboard-grid">
+                    <div class="report-card" style="text-align: left;">
+                        <b>Metode Tikrar</b>
+                        <p style="font-size: 13px;">Ulangi satu ayat 20x. Setelah hafal 1 halaman, ulangi 5x sebelum lanjut ke halaman baru.</p>
+                    </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Waktu Utama</b>
+                        <p style="font-size: 13px;">Gunakan waktu setelah Sahur atau Subuh saat pikiran masih jernih.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modul-section">
+                <h3 class="modul-title">🤲 Doa Ramadhan</h3>
+                <div class="report-card" style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <b>Doa Menyambut & Menjalani Ramadhan</b>
+                    <div class="arabic" style="text-align: center;">أَللَّهُمَّ سَلِّمْنِي لِرَمَضَانَ، وَسَلِّمْ رَمَضَانَ لِي، وَتَسَلَّمْهُ مِنِّي مُتَقَبَّلًا</div>
+                    <p style="font-size: 0.9rem; text-align: center; color: #444; margin: 10px 0;">
+                        <i>"Allahumma sallimni li Ramadhana, wa sallim Ramadhana li, wa tasallamhu minni mutaqabbalan."</i>
+                    </p>
+                    <hr style="border: 0; border-top: 1px solid #ddd;">
+                    <p class="translation" style="text-align: center;">
+                        "Ya Allah, selamatkanlah aku untuk bulan Ramadhan, selamatkanlah bulan Ramadhan untukku, dan terimalah amal ibadaku di bulan Ramadhan dengan ridha-Mu."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav>
+        <button class="nav-btn active" onclick="changeTab('laporan', this)">
+            <span>📝</span><label>LAPORAN</label>
+        </button>
+        <button class="nav-btn" onclick="changeTab('modul', this)">
+            <span>📚</span><label>PANDUAN</label>
+        </button>
+    </nav>
+</div>
+
+<script>
+    function changeTab(pageId, btn) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+        document.getElementById(pageId).classList.add('active-page');
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        window.scrollTo(0,0);
+    }
+    function shout() { alert("Semangat puasanya hari ini! 😊"); }
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('date-now').innerText = new Date().toLocaleDateString('id-ID', options);
+</script>
+
+</body>
+</html>
