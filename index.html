@@ -154,7 +154,34 @@
         </div>
 
         <div id="modul" class="page">
-            <h2 style="text-align: center; margin-bottom: 30px;">📚 Panduan Lengkap</h2>
+            <h2 style="text-align: center; margin-bottom: 30px;">📚 Panduan Lengkap Ramadhan</h2>
+            
+            <div class="modul-section">
+                <h3 class="modul-title">⚖️ Hukum & Syarat Puasa</h3>
+                <div class="dashboard-grid">
+                    <div class="report-card" style="text-align: left;">
+                        <b>Hukum Puasa</b>
+                        <p style="font-size: 13px;">Wajib (Fardhu 'Ain) bagi setiap muslim Baligh & Berakal.</p>
+                    </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Syarat Sah</b>
+                        <ul style="font-size: 13px; padding-left: 18px;">
+                            <li>Islam & Tamyiz</li>
+                            <li>Suci dari Haid/Nifas</li>
+                            <li>Waktu yang dibolehkan</li>
+                        </ul>
+                    </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Membatalkan Puasa</b>
+                        <ul style="font-size: 13px; padding-left: 18px;">
+                            <li>Makan/Minum sengaja</li>
+                            <li>Muntah sengaja</li>
+                            <li>Haid/Nifas/Hilang Akal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="modul-section">
                 <h3 class="modul-title">🌙 Niat & Doa Utama</h3>
                 <div class="dashboard-grid">
@@ -163,6 +190,34 @@
                         <div class="arabic" style="text-align:right;">نَوَيْتُ صَوْمَ غَدٍ عَنْ أَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ لِلَّهِ تَعَالَى</div>
                         <p class="translation" style="text-align:left;">"Aku niat berpuasa esok hari untuk menunaikan kewajiban bulan Ramadhan tahun ini karena Allah Ta'ala."</p>
                     </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Doa Berbuka</b>
+                        <div class="arabic" style="text-align:right;">اللَّهُمَّ لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ</div>
+                        <p class="translation" style="text-align:left;">"Ya Allah, untuk-Mu aku berpuasa, dan kepada-Mu aku beriman, dan dengan rezeki-Mu aku berbuka..."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modul-section">
+                <h3 class="modul-title">📖 Tips Menghafal Al-Qur'an</h3>
+                <div class="dashboard-grid">
+                    <div class="report-card" style="text-align: left;">
+                        <b>Metode Tikrar</b>
+                        <p style="font-size: 13px;">Ulangi satu ayat 20x. Setelah hafal 1 halaman, ulangi 5x sebelum lanjut ke halaman baru.</p>
+                    </div>
+                    <div class="report-card" style="text-align: left;">
+                        <b>Waktu Utama</b>
+                        <p style="font-size: 13px;">Gunakan waktu setelah Sahur atau Subuh saat pikiran masih jernih.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modul-section">
+                <h3 class="modul-title">🤲 Doa Ramadhan Spesifik</h3>
+                <div class="report-card" style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <b>Doa Menyambut Ramadhan</b>
+                    <div class="arabic">أَللَّهُمَّ سَلِّمْنِي لِرَمَضَانَ، وَسَلِّمْ رَمَضَانَ لِي، وَتَسَلَّمْهُ مِنِّي مُتَقَبَّلًا</div>
+                    <p class="translation">"Ya Allah, selamatkanlah aku untuk bulan Ramadhan, selamatkanlah bulan Ramadhan untukku, dan terimalah amal ibadaku dengan ridha-Mu."</p>
                 </div>
             </div>
         </div>
@@ -187,75 +242,23 @@
         window.scrollTo(0,0);
     }
 
-    // DATA DOA & KATA BIJAK (10 Variasi)
     const dailyContent = [
-        {
-            quote: '"Setiap amal dilipatgandakan pahalanya, kecuali puasa. Puasa untuk-Ku."',
-            title: "🤲 Doa Orang Tua",
-            arabic: "رَبِّ اغْفِرْ لِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرًا",
-            trans: "Ya Tuhanku, ampunilah aku dan kedua orang tuaku, dan sayangilah mereka sebagaimana mereka mendidikku di waktu kecil."
-        },
-        {
-            quote: '"Barangsiapa berpuasa Ramadhan karena iman, diampuni dosanya yang lalu."',
-            title: "🤲 Doa Sapu Jagad (Selamat)",
-            arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-            trans: "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka."
-        },
-        {
-            quote: '"Puasa adalah perisai. Janganlah berkata kotor dan berbuat jahil."',
-            title: "🤲 Doa Ketetapan Iman",
-            arabic: "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
-            trans: "Wahai Dzat yang membolak-balikkan hati, teguhkanlah hatiku di atas agama-Mu."
-        },
-        {
-            quote: '"Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain."',
-            title: "🤲 Doa Kelancaran Urusan",
-            arabic: "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
-            trans: "Ya Tuhanku, lapangkanlah dadaku, dan mudahkanlah untukku urusanku."
-        },
-        {
-            quote: '"Tidurnya orang puasa adalah ibadah, diamnya adalah tasbih."',
-            title: "🤲 Doa Sebelum Belajar",
-            arabic: "رَبِّ زِدْنِي عِلْمًا وَارْزُقْنِي فَهْمًا",
-            trans: "Ya Tuhanku, tambahkanlah ilmu kepadaku dan berilah aku pemahaman yang baik."
-        },
-        {
-            quote: '"Kejujuran itu ketenangan, sedangkan kebohongan itu keraguan."',
-            title: "🤲 Doa Perlindungan dari Sifat Malas",
-            arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ",
-            trans: "Ya Allah, aku berlindung kepada-Mu dari kelemahan dan rasa malas."
-        },
-        {
-            quote: '"Senyummu di hadapan saudaramu adalah sedekah."',
-            title: "🤲 Doa Kebaikan Hati",
-            arabic: "اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
-            trans: "Ya Allah, sebagaimana Engkau telah memperbagus kejadianku, maka baguskanlah pula akhlakku."
-        },
-        {
-            quote: '"Ramadhan adalah bulan kesabaran, dan pahala kesabaran adalah surga."',
-            title: "🤲 Doa Penenang Hati",
-            arabic: "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ",
-            trans: "Wahai Yang Maha Hidup, Wahai Yang Maha Berdiri Sendiri, dengan rahmat-Mu aku memohon pertolongan."
-        },
-        {
-            quote: '"Makan sahur itu berkah, maka janganlah kalian meninggalkannya."',
-            title: "🤲 Doa Mensyukuri Nikmat",
-            arabic: "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ",
-            trans: "Ya Tuhanku, berilah aku ilham untuk tetap mensyukuri nikmat-Mu yang telah Engkau anugerahkan kepadaku."
-        },
-        {
-            quote: '"Barangsiapa memberi makan orang berbuka, baginya pahala seperti yang puasa."',
-            title: "🤲 Doa Terhindar dari Penyakit",
-            arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ سُوءِ الأَسْقَامِ",
-            trans: "Ya Allah, aku berlindung kepada-Mu dari buruknya berbagai macam penyakit."
-        }
+        { quote: '"Setiap amal dilipatgandakan pahalanya, kecuali puasa. Puasa untuk-Ku."', title: "🤲 Doa Orang Tua", arabic: "رَبِّ اغْفِرْ لِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرًا", trans: "Ya Tuhanku, ampunilah aku dan kedua orang tuaku, dan sayangilah mereka sebagaimana mereka mendidikku di waktu kecil." },
+        { quote: '"Barangsiapa berpuasa Ramadhan karena iman, diampuni dosanya yang lalu."', title: "🤲 Doa Sapu Jagad (Selamat)", arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ", trans: "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka." },
+        { quote: '"Puasa adalah perisai. Janganlah berkata kotor dan berbuat jahil."', title: "🤲 Doa Ketetapan Iman", arabic: "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ", trans: "Wahai Dzat yang membolak-balikkan hati, teguhkanlah hatiku di atas agama-Mu." },
+        { quote: '"Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain."', title: "🤲 Doa Kelancaran Urusan", arabic: "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي", trans: "Ya Tuhanku, lapangkanlah dadaku, dan mudahkanlah untukku urusanku." },
+        { quote: '"Tidurnya orang puasa adalah ibadah, diamnya adalah tasbih."', title: "🤲 Doa Sebelum Belajar", arabic: "رَبِّ زِدْنِي عِلْمًا وَارْزُقْنِي فَهْمًا", trans: "Ya Tuhanku, tambahkanlah ilmu kepadaku dan berilah aku pemahaman yang baik." },
+        { quote: '"Kejujuran itu ketenangan, sedangkan kebohongan itu keraguan."', title: "🤲 Doa Anti Malas", arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ", trans: "Ya Allah, aku berlindung kepada-Mu dari kelemahan dan rasa malas." },
+        { quote: '"Senyummu di hadapan saudaramu adalah sedekah."', title: "🤲 Doa Akhlak Mulia", arabic: "اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي", trans: "Ya Allah, sebagaimana Engkau telah memperbagus kejadianku, maka baguskanlah pula akhlakku." },
+        { quote: '"Ramadhan adalah bulan kesabaran, dan pahala kesabaran adalah surga."', title: "🤲 Doa Penenang Hati", arabic: "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ", trans: "Wahai Yang Maha Hidup, Wahai Yang Maha Berdiri Sendiri, dengan rahmat-Mu aku memohon pertolongan." },
+        { quote: '"Makan sahur itu berkah, maka janganlah kalian meninggalkannya."', title: "🤲 Doa Syukur Nikmat", arabic: "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ", trans: "Ya Tuhanku, berilah aku ilham untuk tetap mensyukuri nikmat-Mu." },
+        { quote: '"Barangsiapa memberi makan orang berbuka, baginya pahala seperti yang puasa."', title: "🤲 Doa Kesehatan", arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ سُوءِ الأَسْقَامِ", trans: "Ya Allah, aku berlindung kepada-Mu dari buruknya berbagai macam penyakit." }
     ];
 
     function updateDailyContent() {
         const today = new Date().getDate(); 
         const index = today % dailyContent.length; 
         const content = dailyContent[index];
-
         document.getElementById('daily-quote').innerText = content.quote;
         document.getElementById('dua-title').innerText = content.title;
         document.getElementById('dua-arabic').innerText = content.arabic;
@@ -265,9 +268,7 @@
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById('date-now').innerText = new Date().toLocaleDateString('id-ID', options);
     updateDailyContent();
-
-    function shout() { alert("Semangat! Hari ini adalah kesempatan untuk jadi lebih baik. 😊"); }
+    function shout() { alert("Semangat terus ya belajarnya! 😊"); }
 </script>
-
 </body>
 </html>
